@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 # ---------------------------------------------------------------------
-# 
+#
 # ---------------------------------------------------------------------
 # Copyright (c) 2017 BDC International Develop Team and Contributors
 # All rights reserved.
@@ -19,7 +19,7 @@ from openerp.osv.orm import except_orm
 class AccountJournal(models.Model):
     """
     Account Journal model customization.
-    
+
     """
     _inherit = 'account.journal'
 
@@ -29,7 +29,7 @@ class AccountJournal(models.Model):
 class AccountMoveLine(models.Model):
     """
     Account Move model customization.
-    
+
     """
     _inherit = 'account.move.line'
 
