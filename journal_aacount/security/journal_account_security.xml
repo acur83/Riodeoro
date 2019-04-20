@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+  <record model="ir.rule" id="limit_pos_user_rule">
+    <field name="name">Users could see only the POS where was included
+                       previously. </field>
+    <field name="model_id" ref="model_pos_config"/>
+    <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    <field name="domain_force">[('related_user_ids','in',[user.id])]</field>
+  </record>
+
+  <record model="ir.rule" id="point_of_sale_manager_rule">
+    <field name="name">POS: admin see all</field>
+    <field name="model_id" ref="model_pos_config"/>
+    <field name="groups" eval="[(4, ref('base.group_system'))]"/>
+    <field name="domain_force">[(1, '=', 1)]</field>
+  </record>
+
+</odoo>
